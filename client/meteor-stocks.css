@@ -1,0 +1,180 @@
+body, h1, h2, h3, div, p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  min-height: 100vh;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  height: 5em;
+  line-height: 5em;
+  border-bottom: rgb(207, 214, 219) 1px solid;
+  padding: 0 2em;
+}
+
+header h1 {
+  display: inline;
+}
+
+header #login-buttons {
+  float: right;
+  margin-top: 2.5em;
+  font-size: 0.9em;
+}
+
+#login-dropdown-list {
+  left: -200px;
+}
+
+.container {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex: 1;
+  -ms-flex: 1 0 auto;
+}
+
+.main-panel,
+.no-login {
+  flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1 0 auto;
+}
+
+.sidebar {
+  flex: 0 0 19em;
+  -webkit-flex: 0 0 19em;
+  -ms-flex: 0 0 19em;
+  background-color: rgb(236, 239, 242);
+  border-right: rgb(207, 214, 219) 1px solid;
+  overflow: hidden;
+}
+
+.sidebar form.add-stock {
+  height: 3em;
+  line-height: 3em;
+}
+
+.add-stock input {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  padding-left: 2em;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2em;
+}
+
+.sidebar li {
+  height: 3em;
+  line-height: 3em;
+  vertical-align: middle;
+  padding-left: 2em;
+  cursor: default;
+}
+
+.sidebar li:hover {
+  background-color: rgb(216, 223, 237);
+}
+
+.numSelected {
+  color: rgb(172, 172, 173);
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+.options {
+  display: none;
+}
+
+.sidebar li:hover .options {
+  display: inline;
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  color: rgb(113, 114, 115);
+}
+
+.options span {
+  padding: 1em 0.5em;
+  margin: 0 -2px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: rgb(226, 132, 132);
+}
+
+.favourite .toggle-favourite:before {
+  content: "★";
+  color: rgb(255, 248, 173);
+}
+
+.toggle-favourite:hover {
+  background-color: rgb(237, 231, 171);
+}
+
+.toggle-favourite:before {
+  content: "☆"
+}
+
+.no-stocks,
+.fav-filter,
+.no-login {
+  padding: 2em;
+  font-size: 0.8em;
+  color: rgb(148, 161, 173);
+  text-align: center;
+  text-shadow: 1px 1px white;
+}
+
+.fav-filter {
+  cursor: pointer;
+}
+
+.fav-filter {
+  text-decoration: underline;
+}
+
+.fav-filter:hover {
+  color: rgb(71, 71, 71);
+}
+
+.main-panel {
+  padding: 2em;
+}
+
+.detail-symbol,
+.current-price,
+.chart-toggle {
+  color: rgb(113, 114, 115);
+}
+
+.current-price {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  display: inline-block;
+}
+
+.chart-toggle {
+  margin-top: 1em;
+}
+
+#container-area {
+  min-width: 310px;
+  height: 600px;
+}

@@ -1,0 +1,50 @@
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <title>Stock Manager</title>
+</head>
+
+<body>
+  <header>
+    <h1>Meteor Stocks</h1>
+    {{> loginButtons}}
+  </header>
+
+  <div class="container">
+    {{#if currentUser}}
+      <div class="sidebar">
+        <form class="add-stock">
+          <input type="text" name="symbol" placeholder="Search for a symbol..." />
+        </form>
+
+        <ul>
+          {{#each stocks}}
+            {{> stock}}
+          {{/each}}
+        </ul>
+
+        {{#if hasStocks}}
+          <div class="fav-filter">
+            Filter favourites
+          </div>
+        {{else}}
+          <div class="no-stocks">
+            To get started, add a stock by typing its symbol (e.g. aapl, goog etc)
+            in the search box above
+          </div>
+        {{/if}}
+
+      </div>
+
+      <main class="main-panel">
+        {{#with selectedStock}}
+          {{> stockDetail}}
+        {{/with}}
+      </main>
+    {{else}}
+      <div class="no-login">
+        Sign up or log in to get started
+      </div>
+    {{/if}}
+  </div>
+</body>
